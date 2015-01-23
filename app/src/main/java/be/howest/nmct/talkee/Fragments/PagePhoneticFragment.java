@@ -1,0 +1,72 @@
+package be.howest.nmct.talkee.Fragments;
+
+import android.graphics.Typeface;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import be.howest.nmct.talkee.R;
+
+public class PagePhoneticFragment extends Fragment {
+    private ImageView _pagePhoneticHelp;
+    private ImageView _pagePhoneticHelpButton;
+    private TextView _pagePhoneticHelpClose;
+    private TextView _pagePhoneticOefening;
+    private TextView _pagePhoneticTitle;
+    private TextView _pagePhoneticLeeftijd;
+    private TextView _pagePhoneticLeeftijdInfo;
+    private TextView _pagePhoneticDescription;
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        ViewGroup view = (ViewGroup)inflater.inflate(R.layout.page_phonetic, container, false);
+
+        Typeface typeface = Typeface.createFromAsset(getActivity().getAssets(), "fonts/PoetsenOne.ttf");
+
+        _pagePhoneticHelp = (ImageView)view.findViewById(R.id.page_phonetic_help);
+        _pagePhoneticTitle = (TextView)view.findViewById(R.id.page_phonetic_title);
+        _pagePhoneticTitle.setTypeface(typeface);
+        _pagePhoneticLeeftijdInfo = (TextView)view.findViewById(R.id.page_phonetic_leeftijd_info);
+        _pagePhoneticLeeftijdInfo.setTypeface(typeface);
+        _pagePhoneticOefening = (TextView)view.findViewById(R.id.page_phonetic_oefening);
+        _pagePhoneticLeeftijd = (TextView)view.findViewById(R.id.page_phonetic_leeftijd);
+        _pagePhoneticDescription = (TextView)view.findViewById(R.id.page_phonetic_description);
+        _pagePhoneticHelpButton = (ImageView)view.findViewById(R.id.page_phonetic_help_button);
+        _pagePhoneticHelpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                _pagePhoneticHelp.setVisibility(View.VISIBLE);
+                _pagePhoneticHelpClose.setVisibility(View.VISIBLE);
+                _pagePhoneticHelpButton.setVisibility(View.INVISIBLE);
+
+                _pagePhoneticOefening.setVisibility(View.VISIBLE);
+                _pagePhoneticTitle.setVisibility(View.VISIBLE);
+                _pagePhoneticLeeftijd.setVisibility(View.VISIBLE);
+                _pagePhoneticLeeftijdInfo.setVisibility(View.VISIBLE);
+                _pagePhoneticDescription.setVisibility(View.VISIBLE);
+            }
+        });
+        _pagePhoneticHelpClose = (TextView)view.findViewById(R.id.page_phonetic_help_close);
+        _pagePhoneticHelpClose.setTypeface(typeface);
+        _pagePhoneticHelpClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                _pagePhoneticHelp.setVisibility(View.INVISIBLE);
+                _pagePhoneticHelpClose.setVisibility(View.GONE);
+                _pagePhoneticHelpButton.setVisibility(View.VISIBLE);
+
+                _pagePhoneticOefening.setVisibility(View.INVISIBLE);
+                _pagePhoneticTitle.setVisibility(View.INVISIBLE);
+                _pagePhoneticLeeftijd.setVisibility(View.INVISIBLE);
+                _pagePhoneticLeeftijdInfo.setVisibility(View.INVISIBLE);
+                _pagePhoneticDescription.setVisibility(View.INVISIBLE);
+            }
+        });
+
+        return view;
+    }
+}

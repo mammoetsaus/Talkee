@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <ImageView
+        android:id="@+id/page_oriented_background"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:adjustViewBounds="true"
+        android:src="@drawable/background_2" />
+
+    <ImageView
+        android:id="@+id/page_oriented_help"
+        android:layout_width="wrap_content"
+        android:layout_height="500dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/help"
+        android:layout_marginLeft="905dp"
+        android:layout_marginStart="905dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="invisible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/page_help_close"
+        android:id="@+id/page_oriented_help_close"
+        android:gravity="center_horizontal"
+        android:textSize="24dp"
+        android:layout_above="@+id/page_oriented_help_button"
+        android:layout_alignLeft="@+id/page_oriented_help"
+        android:layout_alignStart="@+id/page_oriented_help"
+        android:layout_alignRight="@+id/page_oriented_help"
+        android:layout_alignEnd="@+id/page_oriented_help"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/page_oriented_help_button"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/help_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/page_oriented_help"
+        android:layout_alignStart="@+id/page_oriented_help"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/page_oriented_oefening"
+        android:id="@+id/page_oriented_oefening"
+        android:layout_marginTop="80dp"
+        android:layout_alignTop="@+id/page_oriented_help"
+        android:layout_alignLeft="@+id/page_oriented_help"
+        android:layout_alignStart="@+id/page_oriented_help"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="center_horizontal"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/page_oriented_title"
+        android:id="@+id/page_oriented_title"
+        android:layout_below="@+id/page_oriented_oefening"
+        android:layout_alignLeft="@+id/page_oriented_help"
+        android:layout_alignStart="@+id/page_oriented_help"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="center_horizontal"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/page_oriented_leeftijd"
+        android:id="@+id/page_oriented_leeftijd"
+        android:layout_below="@+id/page_oriented_title"
+        android:layout_alignLeft="@+id/page_oriented_help"
+        android:layout_alignStart="@+id/page_oriented_help"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="center_horizontal"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/page_oriented_leeftijd_info"
+        android:id="@+id/page_oriented_leeftijd_info"
+        android:layout_below="@+id/page_oriented_leeftijd"
+        android:layout_alignLeft="@+id/page_oriented_help"
+        android:layout_alignStart="@+id/page_oriented_help"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="center_horizontal"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/page_oriented_description"
+        android:id="@+id/page_oriented_description"
+        android:layout_below="@+id/page_oriented_leeftijd_info"
+        android:layout_alignLeft="@+id/page_oriented_help"
+        android:layout_alignStart="@+id/page_oriented_help"
+        android:layout_marginTop="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="center_horizontal"
+        android:visibility="invisible"/>
+
+</RelativeLayout>

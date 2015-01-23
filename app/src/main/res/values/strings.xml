@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Talkee</string>
+
+    <string name="page_home_explanation_1">Welkom!</string>
+    <string name="page_home_explanation_2">Ik ben Talkee en ik daag je uit om onze nieuwe app te testen!</string>
+    <string name="page_home_explanation_3">Swipe om de verschillende oefeningen te ontdekken.</string>
+    <string name="page_home_explanation_4">Veel plezier!</string>
+
+    <string name="page_oriented_oefening">Oefening:</string>
+    <string name="page_oriented_title">ontwikkelingsgericht</string>
+    <string name="page_oriented_leeftijd">Leeftijd:</string>
+    <string name="page_oriented_leeftijd_info">6 maanden - 2 jaar</string>
+    <string name="page_oriented_description">
+        Geluidsbronnen onderscheiden
+        \n\nAandacht van het kind
+        \n\nOmgeving waarnemen
+    </string>
+
+    <string name="page_phonological_oefening">Oefening:</string>
+    <string name="page_phonological_title">fonologisch</string>
+    <string name="page_phonological_leeftijd">Leeftijd:</string>
+    <string name="page_phonological_leeftijd_info">2 jaar - 4 jaar</string>
+    <string name="page_phonological_description">
+        Herkennen van klanken
+        \n\nKlanken onderscheiden
+        \n\nKlanken linken aan bronnen
+    </string>
+
+    <string name="page_phonetic_oefening">Oefening:</string>
+    <string name="page_phonetic_title">fonetisch</string>
+    <string name="page_phonetic_leeftijd">Leeftijd:</string>
+    <string name="page_phonetic_leeftijd_info">4 jaar - 12 jaar</string>
+    <string name="page_phonetic_description">
+        Vormen van klanken
+        \n\nKlanken onderscheiden
+        \n\nTongoefeningen
+    </string>
+
+    <string name="page_help_close">sluiten</string>
+
+    <color name="black">#000000</color>
+    <color name="grey">#595959</color>
+</resources>
