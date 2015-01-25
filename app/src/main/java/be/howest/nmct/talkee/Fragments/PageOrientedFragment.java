@@ -1,6 +1,7 @@
 package be.howest.nmct.talkee.Fragments;
 
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -8,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Space;
 import android.widget.TextView;
 
 import be.howest.nmct.talkee.MainActivity;
@@ -22,6 +24,12 @@ public class PageOrientedFragment extends Fragment {
     private TextView _pageOrientedLeeftijd;
     private TextView _pageOrientedLeeftijdInfo;
     private TextView _pageOrientedDescription;
+
+    private ImageView _pageOrientedPlaySound;
+    private ImageView _pageOrientedLionSpace;
+    private TextView _pageOrientedLionText;
+
+    private Boolean isLionAvailable = false;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -66,6 +74,42 @@ public class PageOrientedFragment extends Fragment {
                 _pageOrientedLeeftijd.setVisibility(View.INVISIBLE);
                 _pageOrientedLeeftijdInfo.setVisibility(View.INVISIBLE);
                 _pageOrientedDescription.setVisibility(View.INVISIBLE);
+            }
+        });
+
+        _pageOrientedLionText = (TextView)view.findViewById(R.id.page_oriented_lion_text);
+        _pageOrientedLionText.setTypeface(typeface);
+
+        final MediaPlayer mpLion = MediaPlayer.create(getActivity(), R.raw.lion);
+        final MediaPlayer mpLevel = MediaPlayer.create(getActivity(), R.raw.level);
+        _pageOrientedLionSpace = (ImageView)view.findViewById(R.id.page_oriented_lion_space);
+        _pageOrientedLionSpace.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (isLionAvailable) {
+                    isLionAvailable = false;
+                    _pageOrientedLionSpace.setClickable(false);
+                    mpLevel.start();
+
+                    _pageOrientedLionText.setVisibility(View.VISIBLE);
+                    _pageOrientedLionText.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            _pageOrientedLionText.setVisibility(View.INVISIBLE);
+                        }
+                    }, 3000);
+                }
+            }
+        });
+
+
+        _pageOrientedPlaySound = (ImageView)view.findViewById(R.id.page_oriented_play_sound);
+        _pageOrientedPlaySound.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                isLionAvailable = true;
+                mpLion.start();
+                _pageOrientedLionSpace.setClickable(true);
             }
         });
 

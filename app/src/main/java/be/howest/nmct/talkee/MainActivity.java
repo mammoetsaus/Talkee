@@ -1,5 +1,6 @@
 package be.howest.nmct.talkee;
 
+import android.speech.tts.TextToSpeech;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -9,6 +10,8 @@ import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+
+import java.util.Locale;
 
 import be.howest.nmct.talkee.Fragments.PageFinishFragment;
 import be.howest.nmct.talkee.Fragments.PageHomeFragment;
@@ -24,6 +27,9 @@ public class MainActivity extends FragmentActivity {
 
     public static Animation SHAKE_ANIMATION;
 
+    public static TextToSpeech TTS;
+    public static Boolean CAN_SPEAK = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +40,21 @@ public class MainActivity extends FragmentActivity {
         _pager.setAdapter(_pagerAdapter);
 
         SHAKE_ANIMATION = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.shake);
+
+        TTS = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                if (status != TextToSpeech.ERROR) {
+                    TTS.setLanguage(new Locale("nl_BE"));
+                    TTS.setSpeechRate(1.0f);
+                    TTS.setPitch(1.0f);
+
+                    if (status == TextToSpeech.SUCCESS) {
+                        CAN_SPEAK = true;
+                    }
+                }
+            }
+        });
     }
 
     @Override

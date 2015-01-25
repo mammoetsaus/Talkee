@@ -37,8 +37,17 @@
         \n\nTongoefeningen
     </string>
 
+    <string name="page_oriented_lion_text">Een leeuw, goed gedaan!</string>
+
+    <string name="page_phonological_information">Klik op de prentjes en probeer de klanken te herkennen!</string>
+
+    <string name="page_finish_text_1">Bedankt om even onze app te testen!</string>
+    <string name="page_finish_text_2">Wil je meer weten?\nWij helpen je graag \nverder in onze booth!</string>
+
     <string name="page_help_close">sluiten</string>
 
     <color name="black">#000000</color>
     <color name="grey">#595959</color>
+    <color name="white">#ffffff</color>
+    <color name="orange">#f98921</color>
 </resources>

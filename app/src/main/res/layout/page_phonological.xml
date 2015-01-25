@@ -124,4 +124,101 @@
         android:layout_alignParentEnd="true"
         android:gravity="center_horizontal"
         android:visibility="invisible"/>
+
+    <ImageView
+        android:layout_width="475dp"
+        android:layout_height="105dp"
+        android:id="@+id/page_phonological_hek"
+        android:clickable="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="400dp"
+        android:layout_marginBottom="290dp" />
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="90dp"
+        android:id="@+id/page_phonological_gras_1"
+        android:clickable="true"
+        android:layout_alignBottom="@+id/page_phonological_help"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="200dp"
+        android:layout_marginBottom="50dp" />
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="90dp"
+        android:id="@+id/page_phonological_gras_2"
+        android:clickable="true"
+        android:layout_alignBottom="@+id/page_phonological_help"
+        android:layout_alignRight="@+id/page_phonological_help"
+        android:layout_alignEnd="@+id/page_phonological_help"
+        android:layout_marginBottom="130dp"
+        android:layout_marginRight="300dp" />
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="90dp"
+        android:id="@+id/page_phonological_gras_3"
+        android:clickable="true"
+        android:layout_alignBottom="@+id/page_phonological_help"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginRight="520dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/page_phonological_word"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="75dp"
+        android:gravity="center_horizontal"
+        android:textSize="48dp"
+        android:textColor="@color/orange"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="225dp"
+        android:id="@+id/page_phonological_boom"
+        android:layout_alignBottom="@+id/page_phonological_help"
+        android:layout_alignRight="@+id/page_phonological_help"
+        android:layout_alignEnd="@+id/page_phonological_help"
+        android:layout_marginRight="125dp"
+        android:layout_marginBottom="225dp" />
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:id="@+id/page_phonological_appels"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="440dp"
+        android:layout_marginRight="85dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/page_phonological_information"
+        android:id="@+id/page_phonological_information"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/white" />
+
 </RelativeLayout>
